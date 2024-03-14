@@ -1,10 +1,11 @@
 import React from "react";
 import JobCard from "./JobCard";
-import { useEffect, useState } from "react";
+import { useFilterHook } from "../utils/useFilterHook";
 import { useData } from "../context/dataContext";
 
 const JobList = () => {
   const { jobList, setJobList } = useData();
+  const dateFilterData = useFilterHook();
   // const [jobList, setJobList] = useState([]);
 
   // const fetchJobs = async () => {
@@ -29,7 +30,7 @@ const JobList = () => {
         </div>
       </div>
       <div className='bg-joblist w-[900px] p-5 flex flex-col items-center justify-center gap-5'>
-        {jobList?.map((job, index) => (
+        {dateFilterData?.map((job, index) => (
           <JobCard key={index} job={job} />
         ))}
       </div>
