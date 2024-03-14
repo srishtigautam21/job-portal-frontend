@@ -1,19 +1,21 @@
 import React from "react";
 import JobCard from "./JobCard";
 import { useEffect, useState } from "react";
+import { useData } from "../context/dataContext";
 
 const JobList = () => {
-  const [jobList, setJobList] = useState([]);
+  const { jobList, setJobList } = useData();
+  // const [jobList, setJobList] = useState([]);
 
-  const fetchJobs = async () => {
-    const response = await fetch("http://localhost:3000/jobs");
-    const data = await response.json();
-    console.log(data.jobs);
-    setJobList(data.jobs);
-  };
-  useEffect(() => {
-    fetchJobs();
-  }, []);
+  // const fetchJobs = async () => {
+  //   const response = await fetch("http://localhost:3000/jobs");
+  //   const data = await response.json();
+  //   console.log(data.jobs);
+  //   setJobList(data.jobs);
+  // };
+  // useEffect(() => {
+  //   fetchJobs();
+  // }, []);
   return (
     <div className='p-5'>
       <div className='w-[900px] flex items-center justify-between mb-5'>
