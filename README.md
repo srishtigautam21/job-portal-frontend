@@ -1,5 +1,7 @@
 # This a job portal App
 
+Note : Reload the app once/twice to get the data.
+
 ## Functionalities
 
 1.  Search job : Type the input given in navbar like "frontend developer" or "sde1/2/3" and press enter/ click on search icon.
