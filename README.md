@@ -1,8 +1,26 @@
-# React + Vite
+# This a job portal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Functionalities
 
-Currently, two official plugins are available:
+1.  Search job : Type the input given in navbar like "frontend developer" or "sde1/2/3" and press enter/ click on search icon.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2.  Filter jobs : Filter jobs acoording to the given filters and you clear them out as well.
+
+## Tech Stack
+
+1. Frontend
+
+- Vite + React + TailwindCSS
+
+2. Backend
+
+- Express
+
+3. Database
+
+- MongoDb
+
+## Live link
+
+- [job-portal-app](https://job-portal-frontend-sepia.vercel.app/)
+- [api-link](https://job-portal-backend-drab.vercel.app/jobs)
