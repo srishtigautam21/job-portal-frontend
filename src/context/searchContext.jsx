@@ -5,20 +5,18 @@ const SearchContext = createContext({});
 
 const SearchProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
-  const [message, setErrorMsg] = useState("");
+
   const { jobList, setJobList } = useData();
   let tempData = [];
 
   const handleSearch = () => {
-    console.log(searchInput[0]);
-    // if(searchInput)
     let formattedSearchInput = "";
     if (searchInput[0] === "s" || searchInput[0] === "S") {
       formattedSearchInput = searchInput.split(" ").join("").toLowerCase();
     } else {
       formattedSearchInput = searchInput.toLowerCase();
     }
-    console.log(formattedSearchInput, typeof searchInput);
+
     tempData = jobList.filter((item) => {
       const { jobTitle } = item;
       let formattedTitle = "";
@@ -28,10 +26,9 @@ const SearchProvider = ({ children }) => {
         formattedTitle = jobTitle.toLowerCase();
       }
       return formattedTitle === formattedSearchInput;
-      // jobTitle.toLowerCase().includes(searchInput.toLowerCase());
     });
-    console.log(tempData);
-    if (tempData.length === 0) setErrorMsg("No matching data");
+
+    if (tempData.length === 0) return;
     else {
       setJobList(tempData);
     }

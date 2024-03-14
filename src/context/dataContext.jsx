@@ -8,7 +8,7 @@ const DataProvider = ({ children }) => {
   const fetchJobs = async () => {
     const response = await fetch("http://localhost:3000/jobs");
     const data = await response.json();
-    console.log(data.jobs);
+
     setJobList(data.jobs);
   };
   useEffect(() => {

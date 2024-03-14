@@ -42,8 +42,6 @@ const useFilterHook = () => {
     selectedDatePosted
   );
 
-  console.log(dateFilterData);
-
   if (dateFilterData.length === 0) {
     return jobList;
   } else {

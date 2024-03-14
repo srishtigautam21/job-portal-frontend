@@ -5,13 +5,6 @@ const FilterContext = createContext({});
 
 const FilterProvider = ({ children }) => {
   const { jobList } = useData();
-  //   const [selectedCompany, setSelectedCompany] = useState(null);
-  //   const [selectedLocations, setSelectedLocations] = useState([]);
-  //   const [selectedDatePosted, setSelectedDatePosted] = useState("");
-  //   const [selectedSalaryRange, setSelectedSalaryRange] = useState("");
-  //   const [selectedSkills, setSelectedSkills] = useState([]);
-  //   const [selectedExperience, setSelectedExperience] = useState("");
-  //   const [selectedEducation, setSelectedEducation] = useState("");
 
   const companies = [
     { id: 1, name: "Amazon" },
@@ -57,45 +50,6 @@ const FilterProvider = ({ children }) => {
   ];
 
   const educationOptions = ["Bachelors", "Masters", "Phd", "Diploma"];
-
-  //   const clearAllFilters = () => {
-  //     setSelectedCompany(null);
-  //     setSelectedLocations([]);
-  //     setSelectedDatePosted("");
-  //     setSelectedSalaryRange("");
-  //     setSelectedSkills([]);
-  //     setSelectedExperience("");
-  //     setSelectedEducation("");
-  //   };
-
-  //   useEffect(() => {
-  //     if (selectedCompany === null) handler("id", null);
-  //   }, [selectedCompany]);
-
-  const toggleCompany = (companyId) => {
-    // handler("id", event.target.checked ? companyId : null);
-    setSelectedCompany(companyId);
-  };
-
-  const toggleLocation = (locationId) => {
-    const isSelected = selectedLocations.includes(locationId);
-    if (isSelected) {
-      setSelectedLocations(selectedLocations.filter((id) => id !== locationId));
-    } else {
-      setSelectedLocations([...selectedLocations, locationId]);
-    }
-  };
-
-  const toggleSkill = (skill) => {
-    const isSelected = selectedSkills.includes(skill);
-    if (isSelected) {
-      setSelectedSkills(
-        selectedSkills.filter((selectedSkill) => selectedSkill !== skill)
-      );
-    } else {
-      setSelectedSkills([...selectedSkills, skill]);
-    }
-  };
 
   const initialState = {
     selectedCompany: [],
@@ -150,6 +104,7 @@ const FilterProvider = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(filterReducerFunc, initialState);
+
   return (
     <FilterContext.Provider
       value={{

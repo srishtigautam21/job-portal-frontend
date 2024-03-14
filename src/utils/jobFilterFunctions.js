@@ -13,7 +13,7 @@ const getLocationFilter = (categoryFilterData, selectedLocations) => {
     return categoryFilterData.filter((job) => {
       const { location } = job;
       const city = location.split(", ")[0];
-      //   console.log(city, typeof city);
+
       return selectedLocations.includes(city);
     });
   } else {
