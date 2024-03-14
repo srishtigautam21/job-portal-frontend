@@ -6,7 +6,9 @@ const DataProvider = ({ children }) => {
   const [jobList, setJobList] = useState([]);
 
   const fetchJobs = async () => {
-    const response = await fetch("http://localhost:3000/jobs");
+    const response = await fetch(
+      "https://job-portal-backend-drab.vercel.app/jobs"
+    );
     const data = await response.json();
 
     setJobList(data.jobs);
