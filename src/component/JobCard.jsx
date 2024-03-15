@@ -84,7 +84,7 @@ const JobCard = ({ job }) => {
           <button className='w-[150px] h-[36px] bg-teal-600 text-white rounded-2xl hover:cursor-pointer hover:bg-teal-400'>
             Apply now
           </button>
-          <BsBookmark className='w-8 h-8' />
+          <BsBookmark className='w-8 h-8 text-white' />
         </div>
       </div>
     </div>
