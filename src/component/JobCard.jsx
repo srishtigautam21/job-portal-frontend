@@ -7,7 +7,7 @@ const JobCard = ({ job }) => {
   return (
     <div className='bg-jobCard w-[840px] min-h-[140px] rounded-xl'>
       <div className='flex gap-5 p-3 items-center justify-between'>
-        <div>
+        <div className='flex gap-5 items-center justify-center'>
           <img
             src={companyImg}
             alt='job'
@@ -61,7 +61,8 @@ const JobCard = ({ job }) => {
                 // Text size
                 fontSize: "20px",
                 fontWeight: "600",
-                transformOrigin: "center center",
+                textAlign: "center",
+                marginRight: "20px",
               },
               // Customize background - only used when the `background` prop is true
               background: {
