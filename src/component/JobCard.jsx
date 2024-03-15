@@ -6,7 +6,7 @@ const JobCard = ({ job }) => {
   const percentage = 60;
   return (
     <div className='bg-jobCard w-[840px] min-h-[140px] rounded-xl'>
-      <div className='flex gap-5 p-3'>
+      <div className='flex gap-5 p-3 items-center justify-between'>
         <img
           src={companyImg}
           alt='job'
