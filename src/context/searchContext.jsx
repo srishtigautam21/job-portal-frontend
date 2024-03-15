@@ -16,16 +16,15 @@ const SearchProvider = ({ children }) => {
     } else {
       formattedSearchInput = searchInput.toLowerCase();
     }
-
     tempData = jobList.filter((item) => {
       const { jobTitle } = item;
       let formattedTitle = "";
       if (jobTitle[0] === "S") {
         formattedTitle = jobTitle.split(" ").join("").toLowerCase();
+        return formattedTitle === formattedSearchInput;
       } else {
-        formattedTitle = jobTitle.toLowerCase();
+        return jobTitle.toLowerCase().includes(formattedSearchInput);
       }
-      return formattedTitle === formattedSearchInput;
     });
 
     if (tempData.length === 0) return;
