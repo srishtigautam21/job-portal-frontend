@@ -3,6 +3,7 @@ import companyImg from "../assets/appleimg.png";
 import { CircularProgressbar } from "react-circular-progressbar";
 
 const JobCard = ({ job }) => {
+  const percentage = 60;
   return (
     <div className='bg-jobCard w-[840px] min-h-[140px] rounded-xl'>
       <div className='flex gap-5 p-3'>
