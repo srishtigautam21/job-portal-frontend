@@ -17,14 +17,13 @@ const Navbar = () => {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           onKeyDown={(e) => (e.key === "Enter" ? handleSearch() : "")}
+          placeholder='Search'
         />
-        {/* <div > */}
         <IoSearchOutline
           color='gray'
           cursor='pointer'
           onClick={() => handleSearch()}
         />
-        {/* </div> */}
       </div>
       <div className='flex gap-6 mr-5'>
         <div className='bg-backgroundColor h-[30px] w-[30px] rounded-[50%] flex items-center justify-center'>

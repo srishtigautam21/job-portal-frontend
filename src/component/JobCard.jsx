@@ -1,6 +1,8 @@
 import React from "react";
 import companyImg from "../assets/appleimg.png";
+import { BsBookmark } from "react-icons/bs";
 import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 const JobCard = ({ job }) => {
   const percentage = 60;
@@ -73,16 +75,17 @@ const JobCard = ({ job }) => {
         </div>
       </div>
 
-      {/* <div className='font-bold text-gray-400'>Skills match</div>
-      </div> */}
       <div className='bg-cardFooter h-[60px] p-3 rounded-bl-xl rounded-br-xl flex items-center justify-between'>
         <div className='text-gray-200'>
           <span>Posted {job.datePosted} | </span>
           <span> 10 applicants</span>
         </div>
-        <button className='w-[150px] h-[36px] bg-teal-600 text-white rounded-2xl hover:cursor-pointer hover:bg-teal-400'>
-          Apply now
-        </button>
+        <div className='flex items-center justify-center gap-4'>
+          <button className='w-[150px] h-[36px] bg-teal-600 text-white rounded-2xl hover:cursor-pointer hover:bg-teal-400'>
+            Apply now
+          </button>
+          <BsBookmark className='w-8 h-8' />
+        </div>
       </div>
     </div>
   );
