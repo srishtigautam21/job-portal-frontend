@@ -7,16 +7,18 @@ const JobCard = ({ job }) => {
   return (
     <div className='bg-jobCard w-[840px] min-h-[140px] rounded-xl'>
       <div className='flex gap-5 p-3 items-center justify-between'>
-        <img
-          src={companyImg}
-          alt='job'
-          style={{ objectFit: "cover", width: "60px" }}
-        />
         <div>
-          <div className='font-bold text-gray-200'>{job.jobTitle}</div>
-          <div className='flex flex-col'>
-            <span className='text-gray-200'>{job.companyName}</span>
-            <span className='text-gray-200'>{job.location}</span>
+          <img
+            src={companyImg}
+            alt='job'
+            style={{ objectFit: "cover", width: "60px" }}
+          />
+          <div>
+            <div className='font-bold text-gray-200'>{job.jobTitle}</div>
+            <div className='flex flex-col'>
+              <span className='text-gray-200'>{job.companyName}</span>
+              <span className='text-gray-200'>{job.location}</span>
+            </div>
           </div>
         </div>
         <div className='flex gap-7 items-center justify-center'>
@@ -59,6 +61,7 @@ const JobCard = ({ job }) => {
                 // Text size
                 fontSize: "20px",
                 fontWeight: "600",
+                transformOrigin: "center center",
               },
               // Customize background - only used when the `background` prop is true
               background: {
